@@ -1,5 +1,10 @@
-const fibonacci = function() {
+const fibonacci = function(n) {
+    const num = typeof n === 'number' ? n : parseInt(n);
 
+    if (num < 0) return "OOPS";
+    if (num === 0) return 0;
+    if (num === 1 || num === 2) return 1;
+    return fibonacci(num - 1) + fibonacci(num - 2);
 };
 
 // Do not edit below this line
